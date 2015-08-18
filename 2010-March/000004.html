@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DAMARIS-users] Debugging backends
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/damaris-users/2010-March/index.html" >
+   <LINK REL="made" HREF="mailto:damaris-users%40lists.berlios.de?Subject=Re%3A%20%5BDAMARIS-users%5D%20Debugging%20backends&In-Reply-To=%3C69d3aa561cc2209852f681d9d879cff5.squirrel%40www.grad.icmc.usp.br%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000005.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DAMARIS-users] Debugging backends</H1>
+    <B>Felipe Coelho</B> 
+    <A HREF="mailto:damaris-users%40lists.berlios.de?Subject=Re%3A%20%5BDAMARIS-users%5D%20Debugging%20backends&In-Reply-To=%3C69d3aa561cc2209852f681d9d879cff5.squirrel%40www.grad.icmc.usp.br%3E"
+       TITLE="[DAMARIS-users] Debugging backends">fcoelho at grad.icmc.usp.br
+       </A><BR>
+    <I>Sun Mar 28 22:13:44 CEST 2010</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000005.html">[DAMARIS-users] Debugging backends
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>&gt;<i>Hi Felipe!
+</I>&gt;<i>
+</I>&gt;<i>In deed it is intended to run the backend standalone.
+</I>&gt;<i>Are the files job.000000000 and following present in the spool directory?
+</I>&gt;<i>Could you send the job file?
+</I>&gt;<i>
+</I>&gt;<i>Unfortunately I don't see the mistake immediately. There is nothing
+</I>&gt;<i>wrong on your approach.
+</I>
+Now that you mention it, job.00000000 isn't there when I run it from the
+command line, only job.0*1. still, it was created by the frontend when I
+run the script from it. But it appears that after the script is run, both
+job.x* and job.x*.result are deleted, except for a few ones. In my case,
+job.0*160 remains.
+
+[later]
+I've set the configuration in Damaris to run the experiment script, but
+not the result script, which filled the spool directory with job files.
+job.0*0 is there now and I can run gdb on my core without it 'hanging'.
+
+&gt;<i>a) gbd MyCore
+</I>&gt;<i>b) and on the gdb prompt type:  run --spool myspool
+</I>
+This is exactly what I was trying. It took me a while to figure out why it
+wasn't running (stat telling me that &quot;job.000000000&quot; didn't exist) and now
+I can debug it fine. I've already fixed the issue with the segfault.
+Thanks.
+
+Felipe
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000005.html">[DAMARIS-users] Debugging backends
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#4">[ date ]</a>
+              <a href="thread.html#4">[ thread ]</a>
+              <a href="subject.html#4">[ subject ]</a>
+              <a href="author.html#4">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/damaris-users">More information about the DAMARIS-users
+mailing list</a><br>
+</body></html>

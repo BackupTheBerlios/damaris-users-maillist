@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DAMARIS-users] Debugging backends
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/damaris-users/2010-March/index.html" >
+   <LINK REL="made" HREF="mailto:damaris-users%40lists.berlios.de?Subject=Re%3A%20%5BDAMARIS-users%5D%20Debugging%20backends&In-Reply-To=%3C97a34b0ac8d9d7134eede904853b1146.squirrel%40www.grad.icmc.usp.br%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000003.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DAMARIS-users] Debugging backends</H1>
+    <B>Felipe Coelho</B> 
+    <A HREF="mailto:damaris-users%40lists.berlios.de?Subject=Re%3A%20%5BDAMARIS-users%5D%20Debugging%20backends&In-Reply-To=%3C97a34b0ac8d9d7134eede904853b1146.squirrel%40www.grad.icmc.usp.br%3E"
+       TITLE="[DAMARIS-users] Debugging backends">fcoelho at grad.icmc.usp.br
+       </A><BR>
+    <I>Fri Mar 26 20:35:12 CET 2010</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000003.html">[DAMARIS-users] Debugging backends
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2">[ date ]</a>
+              <a href="thread.html#2">[ thread ]</a>
+              <a href="subject.html#2">[ subject ]</a>
+              <a href="author.html#2">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hi, is there a way to run gdb on the backend executable?
+
+I'm developing a backend and all the information I receive when running it
+through the Damaris frontend is that the &quot;backend was terminated by signal
+ SIGSEGV&quot;.
+
+I've tried running it 'stand alone' like so:
+
+~/Damaris/bin/ $ ../MyCore --spool /home/&lt;myuser&gt;/Damaris/bin/spool/
+
+I got the command line switch from a running backend which prints its argv
+at the beginning. When I run it, however, it just 'hangs', stat'ing a job
+file eternally and never getting the result it wants.
+
+I'm currently using a lot of printf to find out where it stops working,
+but being able to debug the backend would save a lot of time.
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000003.html">[DAMARIS-users] Debugging backends
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#2">[ date ]</a>
+              <a href="thread.html#2">[ thread ]</a>
+              <a href="subject.html#2">[ subject ]</a>
+              <a href="author.html#2">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/damaris-users">More information about the DAMARIS-users
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DAMARIS-users] pulseblaster/damaris question
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/damaris-users/2009-July/index.html" >
+   <LINK REL="made" HREF="mailto:damaris-users%40lists.berlios.de?Subject=Re%3A%20%5BDAMARIS-users%5D%20pulseblaster/damaris%20question&In-Reply-To=%3C4A68C8E0.5040902%40physik.tu-darmstadt.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000001.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DAMARIS-users] pulseblaster/damaris question</H1>
+    <B>Achim Gaedke</B> 
+    <A HREF="mailto:damaris-users%40lists.berlios.de?Subject=Re%3A%20%5BDAMARIS-users%5D%20pulseblaster/damaris%20question&In-Reply-To=%3C4A68C8E0.5040902%40physik.tu-darmstadt.de%3E"
+       TITLE="[DAMARIS-users] pulseblaster/damaris question">Achim.Gaedke at physik.tu-darmstadt.de
+       </A><BR>
+    <I>Thu Jul 23 22:32:32 CEST 2009</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000001.html">[DAMARIS-users] question about damaris
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#0">[ date ]</a>
+              <a href="thread.html#0">[ thread ]</a>
+              <a href="subject.html#0">[ subject ]</a>
+              <a href="author.html#0">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Russell Nordquist wrote:
+&gt;<i> Achim
+</I>&gt;<i>
+</I>&gt;<i> I am working on a system that uses a Spincore card for pattern
+</I>&gt;<i> generation. No development had been done on the systems for a long
+</I>&gt;<i> time. The older 2.4 kernel installation writes directly to a
+</I>&gt;<i> /dev/pulseblaster device driver. I can't find the source, but I
+</I>&gt;<i> believe that this driver came from your project. Has the driver been
+</I>&gt;<i> ported to the 2.6 kernel? I downloaded the damaris-0.11 source and see
+</I>&gt;<i> reference to a pulseblaster.ko driver, but have don't see the actual
+</I>&gt;<i> code for it.
+</I>Hi Russell!
+
+Yes, it is(was) available. I've ported it last year, including automatic
+loading of the driver.
+make -C backends/drivers/SpinCore-PulseBlaster/  pulseblaster.ko
+
+should compile the driver. The driver function did not change except for
+one detail: The write function will give processor time to other
+processes after each 16kb writing to prevent temporary system freezes
+for writing long programs.
+
+Udev is now used to setup permissions and links. The udev rules file can
+be found at:
+backends/tools/080_damaris.rules
+
+**** unfortunately it does not compile with debian lenny (linux-2.6.26) ****
+class_device_create and class_device_destroy are no longer available. I
+will work on that at the weekend.
+
+Achim
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000001.html">[DAMARIS-users] question about damaris
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#0">[ date ]</a>
+              <a href="thread.html#0">[ thread ]</a>
+              <a href="subject.html#0">[ subject ]</a>
+              <a href="author.html#0">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/damaris-users">More information about the DAMARIS-users
+mailing list</a><br>
+</body></html>

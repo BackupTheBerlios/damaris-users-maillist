@@ -1,0 +1,36 @@
+From Roland.Thoma at uni-duesseldorf.de  Thu Apr 25 15:48:26 2013
+From: Roland.Thoma at uni-duesseldorf.de (Roland Thoma)
+Date: Thu, 25 Apr 2013 15:48:26 +0200
+Subject: [DAMARIS-users] ValueError: numpy.dtype does not appear to be the
+	correct type object
+Message-ID: <6284BF6C-2646-4AAA-8A03-1D0099573621@uni-duesseldorf.de>
+
+Hello,
+
+we are going to use DAMARIS in our NMR Lab by using a SpinCore Pulseblaster PCI card.
+After installation of the back- and frontend, I tried to run /damaris/frontends/python-damaris/scripts/DAMARIS
+but I got the following error message:
+
+root at FID:/home/ganymed/software/damaris/damaris-2013mar11/damaris/frontends/python-damaris/scripts# python DAMARIS
+Traceback (most recent call last):
+  File "DAMARIS", line 13, in <module>
+    import damaris.gui.DamarisGUI
+  File "/usr/local/lib/python2.6/dist-packages/damaris/gui/DamarisGUI.py", line 10, in <module>
+    import tables
+  File "/usr/lib/python2.6/dist-packages/tables/__init__.py", line 56, in <module>
+    from tables.utilsExtension import getPyTablesVersion, getHDF5Version
+  File "definitions.pxd", line 138, in tables.utilsExtension
+ValueError: numpy.dtype does not appear to be the correct type object
+
+
+I'm very new in using DAMARIS and someone has given me the hint to contact you with that problem.
+The system we're using is Debian squeeze 32bit. But I mainly using a ssh connection to this machine,
+or does this make some problems?
+
+Many thanks in advance
+
+
+sincerely,
+
+roland
+

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [DAMARIS-users] ValueError: numpy.dtype does not appear to be the	correct type object
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/damaris-users/2013-April/index.html" >
+   <LINK REL="made" HREF="mailto:damaris-users%40lists.berlios.de?Subject=Re%3A%20%5BDAMARIS-users%5D%20ValueError%3A%20numpy.dtype%20does%20not%20appear%20to%20be%20the%0A%09correct%20type%20object&In-Reply-To=%3C6284BF6C-2646-4AAA-8A03-1D0099573621%40uni-duesseldorf.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[DAMARIS-users] ValueError: numpy.dtype does not appear to be the	correct type object</H1>
+    <B>Roland Thoma</B> 
+    <A HREF="mailto:damaris-users%40lists.berlios.de?Subject=Re%3A%20%5BDAMARIS-users%5D%20ValueError%3A%20numpy.dtype%20does%20not%20appear%20to%20be%20the%0A%09correct%20type%20object&In-Reply-To=%3C6284BF6C-2646-4AAA-8A03-1D0099573621%40uni-duesseldorf.de%3E"
+       TITLE="[DAMARIS-users] ValueError: numpy.dtype does not appear to be the	correct type object">Roland.Thoma at uni-duesseldorf.de
+       </A><BR>
+    <I>Thu Apr 25 15:48:26 CEST 2013</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#7">[ date ]</a>
+              <a href="thread.html#7">[ thread ]</a>
+              <a href="subject.html#7">[ subject ]</a>
+              <a href="author.html#7">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Hello,
+
+we are going to use DAMARIS in our NMR Lab by using a SpinCore Pulseblaster PCI card.
+After installation of the back- and frontend, I tried to run /damaris/frontends/python-damaris/scripts/DAMARIS
+but I got the following error message:
+
+<A HREF="https://lists.berlios.de/mailman/listinfo/damaris-users">root at FID</A>:/home/ganymed/software/damaris/damaris-2013mar11/damaris/frontends/python-damaris/scripts# python DAMARIS
+Traceback (most recent call last):
+  File &quot;DAMARIS&quot;, line 13, in &lt;module&gt;
+    import damaris.gui.DamarisGUI
+  File &quot;/usr/local/lib/python2.6/dist-packages/damaris/gui/DamarisGUI.py&quot;, line 10, in &lt;module&gt;
+    import tables
+  File &quot;/usr/lib/python2.6/dist-packages/tables/__init__.py&quot;, line 56, in &lt;module&gt;
+    from tables.utilsExtension import getPyTablesVersion, getHDF5Version
+  File &quot;definitions.pxd&quot;, line 138, in tables.utilsExtension
+ValueError: numpy.dtype does not appear to be the correct type object
+
+
+I'm very new in using DAMARIS and someone has given me the hint to contact you with that problem.
+The system we're using is Debian squeeze 32bit. But I mainly using a ssh connection to this machine,
+or does this make some problems?
+
+Many thanks in advance
+
+
+sincerely,
+
+roland
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#7">[ date ]</a>
+              <a href="thread.html#7">[ thread ]</a>
+              <a href="subject.html#7">[ subject ]</a>
+              <a href="author.html#7">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/damaris-users">More information about the DAMARIS-users
+mailing list</a><br>
+</body></html>
